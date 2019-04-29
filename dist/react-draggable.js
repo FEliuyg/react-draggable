@@ -1195,8 +1195,9 @@
 	}
 
 	function createCSSTransform(controlPos /*: ControlPosition*/, positionOffset /*: PositionOffsetControlPosition*/) /*: Object*/ {
-	  var translation = getTranslation(controlPos, positionOffset, 'px');
-	  return defineProperty({}, browserPrefixToKey('transform', browserPrefix), translation);
+	  // var translation = getTranslation(controlPos, positionOffset, 'px');
+    // return defineProperty({}, browserPrefixToKey('transform', browserPrefix), translation);
+    return { left: positionOffset.x + 'px', top: positionOffset.y + 'px'}
 	}
 
 	function createSVGTransform(controlPos /*: ControlPosition*/, positionOffset /*: PositionOffsetControlPosition*/) /*: string*/ {
